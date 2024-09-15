@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="author" content="Lautaro Waltersdorf" />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="apple-touch-icon" href="./logo.svg" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Sobre Nosotros</title>
+    <meta
+      name="description"
+      content="Desarrollamos sitios web atractivos y funcionales, adaptados a tus necesidades. ¡Haz que tu presencia online destaque!"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <h2 class="brand">Waltersdorf</h2>
+      <nav class="nav">
+        <a href="/" id="home" class="navItem">Home</a>
+        <a href="/about.html" id="about" class="navItem">Sobre Nosotros</a>
+      </nav>
+      <nav class="navMobile">
+        <input type="checkbox" id="navButton" />
+        <ul class="menu">
+          <li>
+            <a href="/">
+              <img src="./img/home.svg" alt="" />
+              Inicio
+            </a>
+          </li>
+          <li>
+            <a href="./about.html">
+              <img src="./img/about.svg" alt="" />
+              Sobre Nosotros
+            </a>
+          </li>
+        </ul>
+        <label for="navButton" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </nav>
+    </header>
+    <main id="swup" class="transition-slideIn">
+      <div class="about">
+        <h2 class="title">Sobre Nosotros</h2>
+        <div class="aboutText">
+          <p>
+            Waltersdorf no es una verdadera mueblería, sino un modelo creado
+            para mostrar nuestra habilidad en diseño web. En este espacio, hemos
+            puesto en práctica nuestra pasión por el diseño y la funcionalidad,
+            con el objetivo de demostrar cómo podemos crear una presencia en
+            línea atractiva y efectiva para negocios en el mundo real.
+            <br /><br />
+            Te invitamos a explorar nuestra web
+            <a
+              class="link"
+              target="_blank"
+              rel="noreferrer"
+              href="https://wdiseñoweb.com"
+              >wdiseñoweb.com</a
+            >
+            y descubrir cómo integramos elementos de diseño, navegación y
+            contenido para ofrecer una experiencia de usuario excepcional.<br /><br />
+            Si estás buscando crear una página web que refleje tu propio negocio
+            con la misma dedicación y detalle, ¡no dudes en contactarnos!.<br /><br />
+            Gracias por visitarnos.
+          </p>
+        </div>
+      </div>
+      <footer class="footer">
+        <h1 class="brand">Waltersdorf</h1>
+        <p class="author">
+          Sitio Web Creado Por
+          <a
+            class="link"
+            target="_blank"
+            rel="noreferrer"
+            href="https://wdiseñoweb.com"
+            >W Diseño Web</a
+          >
+        </p>
+      </footer>
+    </main>
+    <!-- atropos css -->
+    <link rel="stylesheet" href="./atropos.css" />
+    <!-- Swup -->
+    <script src="https://unpkg.com/swup@4"></script>
+    <script type="module">
+      //swup
+      const swup = new Swup();
+      //dinamic style nav
+      const setStyle = (url = window.location.pathname) => {
+        url === "/"
+          ? document.getElementById("home")?.classList.add("active")
+          : document.getElementById("home")?.classList.remove("active");
+        url === "/about.html"
+          ? document.getElementById("about")?.classList.add("active")
+          : document.getElementById("about")?.classList.remove("active");
+      };
+      setStyle();
+
+      swup.hooks.on("page:view", (visit) => {
+        setStyle(visit.to.url);
+        document.getElementById("navButton").checked = false;
+      });
+    </script>
+  </body>
+</html>

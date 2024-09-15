@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <!-- Primary Meta Tags -->
+    <title>Mueblería - Waltersdorf</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicon.webp" />
+    <meta name="title" content="Confitería - Sabrosura Bolsonera" />
+    <meta
+      name="description"
+      content="Te invitamos a sumergirte en un mundo de sabores exquisitos y tradición artesanal. Ubicados en el El Bolsón brindando productos frescos y de calidad."
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sabrosurabolsonera.com" />
+    <meta property="og:title" content="Confitería - Sabrosura Bolsonera" />
+    <meta
+      property="og:description"
+      content="Te invitamos a sumergirte en un mundo de sabores exquisitos y tradición artesanal. Ubicados en el El Bolsón brindando productos frescos y de calidad."
+    />
+    <meta
+      property="og:image"
+      content="https://metatags.io/images/meta-tags.png"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://sabrosurabolsonera.com" />
+    <meta property="twitter:title" content="Confitería - Sabrosura Bolsonera" />
+    <meta
+      property="twitter:description"
+      content="Te invitamos a sumergirte en un mundo de sabores exquisitos y tradición artesanal. Ubicados en el El Bolsón brindando productos frescos y de calidad."
+    />
+    <meta
+      property="twitter:image"
+      content="https://metatags.io/images/meta-tags.png"
+    />
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <h2 class="brand">Waltersdorf</h2>
+      <nav class="nav">
+        <a href="/" id="home" class="navItem">Home</a>
+        <a href="/about.html" id="about" class="navItem">Sobre Nosotros</a>
+      </nav>
+      <nav class="navMobile">
+        <input type="checkbox" id="navButton" />
+        <ul class="menu">
+          <li>
+            <a href="/">
+              <img src="./img/home.svg" alt="" />
+              Inicio
+            </a>
+          </li>
+          <li>
+            <a href="./about.html">
+              <img src="./img/about.svg" alt="" />
+              Sobre Nosotros
+            </a>
+          </li>
+        </ul>
+        <label for="navButton" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </nav>
+    </header>
+    <main id="swup" class="transition-slideIn">
+      <div class="hero">
+        <h1 class="heroTitle">Haz tu interior más minimalista y moderno</h1>
+        <p class="heroSubtitle">
+          Haz que tu habitación sea minimalista y moderna con facilidad y
+          rapidez.
+        </p>
+        <div class="searchBar">
+          <input
+            name="search"
+            class="search"
+            type="text"
+            placeholder="Buscar muebles"
+          />
+          <svg
+            class="searchIcon"
+            width="20px"
+            height="20px"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
+              stroke="#ffffff"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </div>
+      <div class="bestSellers" id="bestSellers">
+        <h2 class="title">Lo más vendido</h2>
+        <div class="cards">
+          <div class="card">
+            <img class="img" src="./img/sakarias.webp" alt="" />
+            <div class="description">
+              <p class="category">Silla</p>
+              <h3 class="product">Silla Sakarias</h3>
+              <div>
+                <img src="./img/star.svg" alt="" />
+                <img src="./img/star.svg" alt="" />
+                <img src="./img/star.svg" alt="" />
+                <img src="./img/star.svg" alt="" />
+                <img src="./img/star.svg" alt="" />
+              </div>
+            </div>
+            <div class="cardBottom">
+              <p class="price">$ 392</p>
+              <button>+</button>
+            </div>
+          </div>
+          <div class="card">
+            <img class="img" src="./img/baltsar.webp" alt="" />
+            <div class="description">
+              <p class="category">Silla</p>
+              <h3 class="product">Silla Baltsar</h3>
+              <div>
+                <img src="./img/star.svg" alt="" />
+                <img src="./img/star.svg" alt="" />
+                <img src="./img/star.svg" alt="" />
+                <img src="./img/star.svg" alt="" />
+                <img src="./img/star.svg" alt="" />
+              </div>
+            </div>
+            <div class="cardBottom">
+              <p class="price">$ 299</p>
+              <button>+</button>
+            </div>
+          </div>
+          <div class="card">
+            <img class="img" src="./img/anjay.webp" alt="" />
+            <div class="description">
+              <p class="category">Silla</p>
+              <h3 class="product">Silla Anjay</h3>
+              <div>
+                <img src="./img/star.svg" alt="" />
+                <img src="./img/star.svg" alt="" />
+                <img src="./img/star.svg" alt="" />
+                <img src="./img/star.svg" alt="" />
+                <img src="./img/star.svg" alt="" />
+              </div>
+            </div>
+            <div class="cardBottom">
+              <p class="price">$ 519</p>
+              <button>+</button>
+            </div>
+          </div>
+          <div class="card">
+            <img class="img" src="./img/nyantuy.webp" alt="" />
+            <div class="description">
+              <p class="category">Silla</p>
+              <h3 class="product">Silla Anjay</h3>
+              <div>
+                <img src="./img/star.svg" alt="" />
+                <img src="./img/star.svg" alt="" />
+                <img src="./img/star.svg" alt="" />
+                <img src="./img/star.svg" alt="" />
+                <img src="./img/star.svg" alt="" />
+              </div>
+            </div>
+            <div class="cardBottom">
+              <p class="price">$ 921</p>
+              <button>+</button>
+            </div>
+          </div>
+        </div>
+        <input type="checkbox" id="seeMore" />
+        <div class="cards cards2">
+          <div class="card">
+            <img class="img" src="./img/sakarias.webp" alt="" />
+            <div class="description">
+              <p class="category">Silla</p>
+              <h3 class="product">Silla Sakarias</h3>
+              <div>
+                <img src="./img/star.svg" alt="" />
+                <img src="./img/star.svg" alt="" />
+                <img src="./img/star.svg" alt="" />
+                <img src="./img/star.svg" alt="" />
+                <img src="./img/star.svg" alt="" />
+              </div>
+            </div>
+            <div class="cardBottom">
+              <p class="price">$ 392</p>
+              <button>+</button>
+            </div>
+          </div>
+          <div class="card">
+            <img class="img" src="./img/baltsar.webp" alt="" />
+            <div class="description">
+              <p class="category">Silla</p>
+              <h3 class="product">Silla Baltsar</h3>
+              <div>
+                <img src="./img/star.svg" alt="" />
+                <img src="./img/star.svg" alt="" />
+                <img src="./img/star.svg" alt="" />
+                <img src="./img/star.svg" alt="" />
+                <img src="./img/star.svg" alt="" />
+              </div>
+            </div>
+            <div class="cardBottom">
+              <p class="price">$ 299</p>
+              <button>+</button>
+            </div>
+          </div>
+          <div class="card">
+            <img class="img" src="./img/anjay.webp" alt="" />
+            <div class="description">
+              <p class="category">Silla</p>
+              <h3 class="product">Silla Anjay</h3>
+              <div>
+                <img src="./img/star.svg" alt="" />
+                <img src="./img/star.svg" alt="" />
+                <img src="./img/star.svg" alt="" />
+                <img src="./img/star.svg" alt="" />
+                <img src="./img/star.svg" alt="" />
+              </div>
+            </div>
+            <div class="cardBottom">
+              <p class="price">$ 519</p>
+              <button>+</button>
+            </div>
+          </div>
+          <div class="card">
+            <img class="img" src="./img/nyantuy.webp" alt="" />
+            <div class="description">
+              <p class="category">Silla</p>
+              <h3 class="product">Silla Anjay</h3>
+              <div>
+                <img src="./img/star.svg" alt="" />
+                <img src="./img/star.svg" alt="" />
+                <img src="./img/star.svg" alt="" />
+                <img src="./img/star.svg" alt="" />
+                <img src="./img/star.svg" alt="" />
+              </div>
+            </div>
+            <div class="cardBottom">
+              <p class="price">$ 921</p>
+              <button>+</button>
+            </div>
+          </div>
+        </div>
+        <label class="seeMore" for="seeMore">Ver </label>
+      </div>
+      <div class="section">
+        <img src="./img/section1.webp" alt="" />
+        <div class="sectionText">
+          <p class="sectionTitle">Experiencia</p>
+          <p class="sectionSubtitle">Te brindamos la mejor experiencia</p>
+          <p class="sectionDescription">
+            No tienes que preocuparte por el resultado porque todos estos
+            interiores están hechos por profesionales, con un estilo elegante,
+            lujoso y con materiales de primera calidad.
+          </p>
+        </div>
+      </div>
+      <div class="section section2">
+        <div class="sectionText">
+          <p class="sectionTitle">Materiales</p>
+          <p class="sectionSubtitle">Utilizamos solo los mejores materiales</p>
+          <p class="sectionDescription">
+            Nos enorgullece ofrecer muebles que no solo realzan la estética de
+            cualquier espacio, sino que también garantizan una durabilidad sin
+            igual.
+          </p>
+        </div>
+        <img src="./img/section2.webp" alt="" />
+      </div>
+      <div class="footer">
+        <h4 class="brand">Waltersdorf</h4>
+        <p class="author">Sitio Web Creado Por <a>W Diseño Web</a></p>
+      </div>
+    </main>
+    <!-- Swup -->
+    <script src="./Swup.umd.js"></script>
+    <script type="module">
+      //swup
+      const swup = new Swup();
+      //dinamic style nav
+      const setStyle = (url = window.location.pathname) => {
+        url === "/"
+          ? document.getElementById("home")?.classList.add("active")
+          : document.getElementById("home")?.classList.remove("active");
+        url === "/about.html"
+          ? document.getElementById("about")?.classList.add("active")
+          : document.getElementById("about")?.classList.remove("active");
+      };
+      setStyle();
+
+      //swup hooks
+      swup.hooks.on("page:view", (visit) => {
+        setStyle(visit.to.url);
+        document.getElementById("navButton").checked = false;
+      });
+    </script>
+  </body>
+</html>
