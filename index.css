@@ -1,6 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 html {
   scroll-behavior: smooth !important;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("fonts/Montserrat-Regular.ttf");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("fonts/Montserrat-SemiBold.ttf");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("fonts/Montserrat-Medium.ttf");
+  font-weight: 500;
+  font-display: swap;
 }
 :root {
   --color-main: #e0e0e0;
@@ -324,13 +341,13 @@ html.is-animating .transition-slideIn {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 100rem;
+  max-width: 80rem;
   gap: 2rem;
 }
 .card {
   display: flex;
   flex-direction: column;
-  min-width: 15rem;
+  width: 100%;
   padding: 1rem;
   background-color: var(--color-main);
   border-radius: 2rem;
@@ -339,15 +356,22 @@ html.is-animating .transition-slideIn {
   color: var(--color-background);
   font-size: var(--font-small);
 }
-.img {
-  max-height: 15rem;
-  width: auto;
+.imgHorizontal {
+  height: auto;
+  width: 90%;
+  max-width: 60rem;
+  margin-inline: auto;
+}
+.imgVertical {
+  max-height: 20rem;
+  height: 100%;
   margin-inline: auto;
 }
 .description {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  margin-top: auto;
 }
 .category {
   font-size: var(--font-smaller);
@@ -356,12 +380,11 @@ html.is-animating .transition-slideIn {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: auto;
 }
 .price {
   font-weight: 700;
 }
-.cards2 {
+.hidden {
   display: none;
 }
 input[type="checkbox"] {
@@ -374,11 +397,13 @@ input[type="checkbox"] {
   padding: 1rem;
   border-radius: 2rem;
   cursor: pointer;
+  height: fit-content;
+  margin-inline: 30%;
 }
 .seeMore:after {
   content: "Más";
 }
-input[type="checkbox"]:checked ~ .cards2 {
+input[type="checkbox"]:checked ~ .hidden {
   display: flex;
 }
 input[type="checkbox"]:checked ~ .seeMore:after {
@@ -387,6 +412,14 @@ input[type="checkbox"]:checked ~ .seeMore:after {
 @media only screen and (max-width: 750px) {
   .bestSellers {
     width: 100%;
+  }
+  .card {
+    width: 80%;
+  }
+  button {
+    line-height: 1rem;
+    width: 2rem;
+    height: 2rem;
   }
 }
 /* section */
