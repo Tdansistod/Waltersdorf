@@ -266,12 +266,13 @@ html.is-animating .transition-slideIn {
 }
 .heroTitle {
   font-size: var(--font-xlarge);
-  margin: 0;
+  margin: 0 1rem;
   max-width: 60rem;
 }
 .heroSubtitle {
   font-size: var(--font-small);
   font-weight: 400;
+  margin: 0 1rem;
 }
 .searchBar {
   display: flex;
@@ -347,7 +348,6 @@ html.is-animating .transition-slideIn {
 .card {
   display: flex;
   flex-direction: column;
-  width: 100%;
   padding: 1rem;
   background-color: var(--color-main);
   border-radius: 2rem;
@@ -364,7 +364,7 @@ html.is-animating .transition-slideIn {
 }
 .imgVertical {
   max-height: 20rem;
-  height: 100%;
+  max-width: 100%;
   margin-inline: auto;
 }
 .description {
@@ -414,7 +414,7 @@ input[type="checkbox"]:checked ~ .seeMore:after {
     width: 100%;
   }
   .card {
-    width: 80%;
+    width: 90%;
   }
   button {
     line-height: 1rem;
